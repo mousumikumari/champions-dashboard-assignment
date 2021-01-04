@@ -9,7 +9,8 @@ const ChampionInfo = (props) => {
   const openHome = () => {
     history.push("/");
   };
-  return(
+
+  return (
     <div className="container">
     <button
       type="button"
