@@ -1,0 +1,49 @@
+.container{
+    border-radius: 15px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 8px 6px -6px black;
+    padding: 10px 5px;
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+    justify-content: space-between;
+    text-align: justify;
+}
+.display-inlineb {
+    display: inline-block;
+    position: relative;
+    font-size: large;
+  }
+
+  .react-search-field {
+    min-width: 70%;
+  }
+  button {
+    text-align: center;
+    align-content: center;
+  }  
+  .sortIcon {
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  .header{
+    color: white;
+    background-color: silver;
+  }
+  .heading {
+    display: flex;
+    justify-content: center;
+  }
+  
+  img {
+    border-radius: 30%;
+  }
+  
+  .backgroundColorGreen{
+    background-color:green !important;
+  }
+
+  .backgroundColorRed{
+    background-color:red !important;
+  }
