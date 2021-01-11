@@ -3,22 +3,10 @@ import * as ReactBootStrap from "react-bootstrap";
 import PropTypes from "prop-types";
 import './ChampionInfo.css';
 const ChampionInfo = (props) => {
-    const { location } = props;
-  const { history } = props;
-  const { champion } = location.state;
-  const openHome = () => {
-    history.push("/");
-  };
-
+  const Champions = JSON.parse(localStorage.getItem("champ")) !== null ? JSON.parse(localStorage.getItem("champ")) : [];
+  const champion = Champions.champion;
   return (
     <div className="container">
-    <button
-      type="button"
-      className="styledButton"
-      onClick={openHome}
-    >
-      Home
-    </button>
     <ReactBootStrap.Table responsive="lg" striped bordered hover>
       <tbody>
         <tr>

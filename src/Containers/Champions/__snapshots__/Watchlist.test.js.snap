@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`First Snapshot test 1`] = `
+<div>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col left"
+      >
+         
+        <h2>
+          My Watchlist
+        </h2>
+      </div>
+      <div
+        className="col right"
+      >
+        <button
+          className="styledButton"
+          onClick={[Function]}
+          type="button"
+        >
+          Back to Home
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="table-responsive-md"
+    >
+      <table
+        className="table table-bordered table-hover"
+      >
+        <thead>
+          <tr
+            className="center"
+          >
+            <th>
+              Champion Profile
+            </th>
+            <th>
+              Champion ID
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              Armor
+            </th>
+            <th>
+              armorperlevel
+            </th>
+            <th>
+              hp
+            </th>
+            <th>
+              Watchlist Action
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
+  </div>
+</div>
+`;
