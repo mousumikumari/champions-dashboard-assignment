@@ -3,7 +3,11 @@ import { useHistory, Link } from "react-router-dom";
 import * as ReactBootStrap from "react-bootstrap";
 
 const Watchlist = () => {
-
+/**
+ * This Function is responsible to show the Watchlist
+ *
+ * @param {object} props Watchlist details
+ */
   const watchlist = JSON.parse(localStorage.getItem("watchlist"));
   const [modWatchlist, setWatchlist] = useState(watchlist);
   const history = useHistory();
@@ -85,7 +89,7 @@ const Watchlist = () => {
     </ReactBootStrap.Table>
   </div>
   </div>
-      
+
   );
 };
 

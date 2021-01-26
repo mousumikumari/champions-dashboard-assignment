@@ -13,9 +13,18 @@ import useModal from "./useModal"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const pageNumbers = [10, 20, 50];
-
+/**
+ * This Function is responsible to show the main champions Grid
+ *
+ * Main Champions Page
+ * @param {object} props The details of the champions grid as props
+ */
 const Champion = (props) => {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 0b84db02e460d7b52a9feaae5342ef6a509abea4
     const { isShowing, toggle } = useModal();
     const watchlist = JSON.parse(localStorage.getItem("watchlist")) !== null ? JSON.parse(localStorage.getItem("watchlist")) : [];
     const [modWatchlist, setWatchlist] = useState(watchlist);
@@ -33,13 +42,21 @@ const Champion = (props) => {
         allChampions, pageSize, onSearchEnter, openWatchlist,
         searchedText, champions, firstPage, lastPage, setPageSize, sortBy, sortOn,openChampionDetails
       } = props;
-
+  /**
+   *Remove Champion from Watchlist
+   *
+   * @param {integer} event ChampionId to add
+   */
       const removeChampion = (event) => {
         const watch = modWatchlist.filter((e) => e.id !== event);
         setWatchlist(watch, () => { updateWatchlist(modWatchlist); });
       };
 
-
+ /**
+   *Add Champion to Watchlist
+   *
+   * @param {Array} event Champion to add
+   */
       const addChampion = (event) => {
         setWatchlist((watchlsts) => [...watchlsts, event]);
         updateWatchlist(modWatchlist);
@@ -103,7 +120,7 @@ const Champion = (props) => {
         <ReactBootStrap.Table responsive="sm" bordered hover>
           <thead className="header">
             <tr className="center">
-            
+
               <th>
                 <div className="heading">
                   <div>
@@ -167,7 +184,11 @@ const Champion = (props) => {
             {champions.map((champion) => (
               <tr key={champion.id} className="center">
                 <td>{champion.id}</td>
+<<<<<<< HEAD
                 <td onClick={() => openChampionDetails(champion)}>   
+=======
+                <td onClick={() => openChampionDetails(champion)}>
+>>>>>>> 0b84db02e460d7b52a9feaae5342ef6a509abea4
                 <a href="#" onClick={toggle}>
                 {champion.name}
                 </a>
@@ -188,22 +209,22 @@ const Champion = (props) => {
                 </td>
                 <td>
                   <div>
-                    
+
                       <button
                         type="button"
                         className="btn btn-primary btn-lg backgroundColorGreen" disabled={!(modWatchlist.filter((e) => e.id === champion.id).length === 0)}
                         onClick={() => addChampion(champion)}>
                         Add
                       </button>
-                  
-                   
+
+
                       <button
                         type="button"
                          className=" btn btn-primary btn-lg backgroundColorRed" disabled={!(modWatchlist.filter((e) => e.id === champion.id).length === 1)}
                         onClick={() => removeChampion(champion.id)}>
                         Remove
                       </button>
-              
+
                   </div>
                 </td>
               </tr>
@@ -222,7 +243,11 @@ const Champion = (props) => {
         isShowing={isShowing}
         hide={toggle}
       />
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> 0b84db02e460d7b52a9feaae5342ef6a509abea4
         </div>
       );
 
@@ -248,5 +273,8 @@ Champion.propTypes = {
   };
 
   export default Champion;
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> 0b84db02e460d7b52a9feaae5342ef6a509abea4
