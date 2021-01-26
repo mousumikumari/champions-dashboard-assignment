@@ -1,0 +1,459 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Champion Snapshot test 1`] = `
+<div
+  className=""
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col left"
+    >
+      <div
+        className="react-search-field "
+        style={
+          Object {
+            "border": "1px #ddd solid",
+            "display": "inline-flex",
+            "height": 35,
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <input
+          className="react-search-field-input"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Search item"
+          style={
+            Object {
+              "border": "none",
+              "color": "#5a5a5a",
+              "flex": 1,
+              "fontSize": 14,
+              "fontWeight": 100,
+              "height": 33,
+              "outline": "none",
+              "padding": 10,
+            }
+          }
+          type="text"
+          value=""
+        />
+        <button
+          className="react-search-field-button"
+          onClick={[Function]}
+          style={
+            Object {
+              "appearance": "none",
+              "backgroundColor": "white",
+              "border": "none",
+              "borderLeft": "1px #ddd solid",
+              "boxSizing": "border-box",
+              "cursor": "pointer",
+              "height": 33,
+              "outline": "none",
+              "padding": 5,
+              "width": 33,
+            }
+          }
+          type="button"
+        >
+          <svg
+            height={21}
+            style={
+              Object {
+                "fill": "#727272",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 635 635"
+            width={21}
+            x="0px"
+            y="0px"
+          >
+            <g>
+              <path
+                d="M255.108,0C119.863,0,10.204,109.66,10.204,244.904c0,135.245,109.659,244.905,244.904,244.905 c52.006,0,100.238-16.223,139.883-43.854l185.205,185.176c1.671,1.672,4.379,1.672,5.964,0.115l34.892-34.891 c1.613-1.613,1.47-4.379-0.115-5.965L438.151,407.605c38.493-43.246,61.86-100.237,61.86-162.702 C500.012,109.66,390.353,0,255.108,0z M255.108,460.996c-119.34,0-216.092-96.752-216.092-216.092 c0-119.34,96.751-216.091,216.092-216.091s216.091,96.751,216.091,216.091C471.199,364.244,374.448,460.996,255.108,460.996z"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      className="col right"
+    >
+      <div
+        className="display-inlineb"
+      >
+        <div
+          className="display-inlineb dropdown"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle btn btn-primary"
+            disabled={false}
+            id="document-type"
+            onClick={[Function]}
+            type="button"
+          >
+            PageSize ( 10 )
+          </button>
+        </div>
+      </div>
+      <button
+        className="styledButton"
+        id="openWatchlist"
+        onClick={
+          Object {
+            "push": [MockFunction],
+          }
+        }
+        type="button"
+      >
+        Watchlist (
+        0
+        )
+      </button>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="table-responsive-sm"
+    >
+      <table
+        className="table table-bordered table-hover"
+      >
+        <thead
+          className="header"
+        >
+          <tr
+            className="center"
+          >
+            <th>
+              <div
+                className="heading"
+              >
+                <div>
+                  Champion ID
+                </div>
+                <div
+                  className="sortIcon"
+                >
+                  <i
+                    className="fa fa-sort-asc"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "color": "lightgray",
+                      }
+                    }
+                  />
+                  <i
+                    className="fa fa-sort-desc"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "color": "lightgray",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </th>
+            <th>
+              <div
+                className="heading"
+              >
+                <div>
+                  Name
+                </div>
+                <div
+                  className="sortIcon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-sort-up fa-w-10 fa-1x "
+                    data-icon="sort-up"
+                    data-prefix="fas"
+                    focusable="false"
+                    onClick={[Function]}
+                    role="img"
+                    style={
+                      Object {
+                        "color": "lightgray",
+                      }
+                    }
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-sort-down fa-w-10 fa-1x "
+                    data-icon="sort-down"
+                    data-prefix="fas"
+                    focusable="false"
+                    onClick={[Function]}
+                    role="img"
+                    style={
+                      Object {
+                        "color": "lightgray",
+                      }
+                    }
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div
+                className="heading"
+              >
+                <div>
+                  Armor
+                </div>
+                <div
+                  className="sortIcon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-sort-up fa-w-10 fa-1x "
+                    data-icon="sort-up"
+                    data-prefix="fas"
+                    focusable="false"
+                    onClick={[Function]}
+                    role="img"
+                    style={
+                      Object {
+                        "color": "lightgray",
+                      }
+                    }
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-sort-down fa-w-10 fa-1x "
+                    data-icon="sort-down"
+                    data-prefix="fas"
+                    focusable="false"
+                    onClick={[Function]}
+                    role="img"
+                    style={
+                      Object {
+                        "color": "lightgray",
+                      }
+                    }
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div
+                className="heading"
+              >
+                <div>
+                  attackrange
+                </div>
+                <div
+                  className="sortIcon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-sort-up fa-w-10 fa-1x "
+                    data-icon="sort-up"
+                    data-prefix="fas"
+                    focusable="false"
+                    onClick={[Function]}
+                    role="img"
+                    style={
+                      Object {
+                        "color": "lightgray",
+                      }
+                    }
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-sort-down fa-w-10 fa-1x "
+                    data-icon="sort-down"
+                    data-prefix="fas"
+                    focusable="false"
+                    onClick={[Function]}
+                    role="img"
+                    style={
+                      Object {
+                        "color": "lightgray",
+                      }
+                    }
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div
+                className="heading"
+              >
+                <div>
+                  attackspeedperlevel
+                </div>
+                <div
+                  className="sortIcon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-sort-up fa-w-10 fa-1x "
+                    data-icon="sort-up"
+                    data-prefix="fas"
+                    focusable="false"
+                    onClick={[Function]}
+                    role="img"
+                    style={
+                      Object {
+                        "color": "lightgray",
+                      }
+                    }
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-sort-down fa-w-10 fa-1x "
+                    data-icon="sort-down"
+                    data-prefix="fas"
+                    focusable="false"
+                    onClick={[Function]}
+                    role="img"
+                    style={
+                      Object {
+                        "color": "lightgray",
+                      }
+                    }
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+              </div>
+            </th>
+            <th>
+              Champion Image
+            </th>
+            <th>
+              Watchlist Action
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
+    <ul
+      className="pagination"
+    >
+      <li
+        className="page-item"
+      >
+        <a
+          className="page-link"
+          href="#"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+        >
+          <span
+            aria-hidden="true"
+          >
+            «
+          </span>
+          <span
+            className="sr-only"
+          >
+            First
+          </span>
+        </a>
+      </li>
+      <li
+        className="page-item"
+      >
+        <a
+          className="page-link"
+          href="#"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+        >
+          <span
+            aria-hidden="true"
+          >
+            »
+          </span>
+          <span
+            className="sr-only"
+          >
+            Last
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

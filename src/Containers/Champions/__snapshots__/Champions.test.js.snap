@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Champions Snapshot test 1`] = `
+<div>
+  <h1>
+    Please wait
+  </h1>
+</div>
+`;

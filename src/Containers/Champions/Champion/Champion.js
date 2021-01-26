@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { DropdownButton, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -8,26 +8,30 @@ import * as ReactBootStrap from "react-bootstrap";
 import Pagination from "react-bootstrap/Pagination";
 import SearchField from "react-search-field";
 import './Champion.css';
-
+import Modal from "./Modal";
+import useModal from "./useModal"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const pageNumbers = [10, 20, 50];
 
 const Champion = (props) => {
+  
+    const { isShowing, toggle } = useModal();
     const watchlist = JSON.parse(localStorage.getItem("watchlist")) !== null ? JSON.parse(localStorage.getItem("watchlist")) : [];
     const [modWatchlist, setWatchlist] = useState(watchlist);
-
+  
     const updateWatchlist = (watchlst) => {
       localStorage.setItem("watchlist", JSON.stringify(watchlst));
     };
 
     useEffect(() => {
         updateWatchlist(modWatchlist);
+
       });
 
       const {
         allChampions, pageSize, onSearchEnter, openWatchlist,
-        searchedText, champions, firstPage, lastPage, setPageSize, sortBy, sortOn,
+        searchedText, champions, firstPage, lastPage, setPageSize, sortBy, sortOn,openChampionDetails
       } = props;
 
       const removeChampion = (event) => {
@@ -62,7 +66,7 @@ const Champion = (props) => {
 
       return(
         <div className="">
-  <div className="row">
+    <div className="row">
           <div className="col left">
             <SearchField
               placeholder="Search item"
@@ -163,15 +167,18 @@ const Champion = (props) => {
             {champions.map((champion) => (
               <tr key={champion.id} className="center">
                 <td>{champion.id}</td>
-                <td>
-                  <Link
+                <td onClick={() => openChampionDetails(champion)}>   
+                <a href="#" onClick={toggle}>
+                {champion.name}
+                </a>
+                  {/* <Link href='#' onClick={toggle}
                     to={{
-                      pathname: "/ChampionInfo",
+                      pathname: "/Modal",
                       state: { champion },
                     }}
                   >
                     {champion.name}
-                  </Link>
+                  </Link> */}
                 </td>
                 <td>{champion.armor}</td>
                 <td>{champion.attackrange}</td>
@@ -211,7 +218,11 @@ const Champion = (props) => {
         </Pagination>
         )}
       </div>
-
+      <Modal
+        isShowing={isShowing}
+        hide={toggle}
+      />
+      
         </div>
       );
 
@@ -237,3 +248,5 @@ Champion.propTypes = {
   };
 
   export default Champion;
+  
+

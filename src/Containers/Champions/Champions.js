@@ -211,15 +211,10 @@ const initialState = {
   };
 
   openChampionDetails = (champion) => {
-    // const history = useHistory();
-    const { history } = this.props;
     this.setState({
       champion,
     }, () => {
       this.updateLocalStorage();
-      history.push({
-        pathname: "/ChampionInfo",
-      });
     });
   };
 
