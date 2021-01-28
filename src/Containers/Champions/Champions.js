@@ -157,7 +157,6 @@ const initialState = {
     this.updateLocalStorage();
   };
 
-
   sort = (key) => {
     const { visibleArticles } = this.state;
     visibleArticles.sort(this.compareByDesc(key));
