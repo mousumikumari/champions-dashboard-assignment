@@ -20,7 +20,6 @@ const pageNumbers = [10, 20, 50];
  * @param {object} props The details of the champions grid as props
  */
 const Champion = (props) => {
-
     const { isShowing, toggle } = useModal();
     const watchlist = JSON.parse(localStorage.getItem("watchlist")) !== null ? JSON.parse(localStorage.getItem("watchlist")) : [];
     const [modWatchlist, setWatchlist] = useState(watchlist);
@@ -184,14 +183,6 @@ const Champion = (props) => {
                 <a href="#" onClick={toggle}>
                 {champion.name}
                 </a>
-                  {/* <Link href='#' onClick={toggle}
-                    to={{
-                      pathname: "/Modal",
-                      state: { champion },
-                    }}
-                  >
-                    {champion.name}
-                  </Link> */}
                 </td>
                 <td>{champion.armor}</td>
                 <td>{champion.attackrange}</td>
@@ -235,7 +226,6 @@ const Champion = (props) => {
         isShowing={isShowing}
         hide={toggle}
       />
-
         </div>
       );
 

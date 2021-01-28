@@ -3,6 +3,7 @@ import React, { Component } from "react";
 // import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import Champion from "./Champion/Champion";
+import WatchList from "./Watchlist";
 
 const initialState = {
     articles: [],
@@ -18,6 +19,7 @@ const initialState = {
     sortOn: "",
   };
   const token = "z0ByBS37GxjZtLGFf4qBi1HW6-lpyIc2MpiZuSp97R5S9bfaJq4";
+  const url= "https://api.pandascore.co/lol/champions?";
   class Champions extends Component {
     constructor(props) {
       super(props);
@@ -25,11 +27,11 @@ const initialState = {
         ? JSON.parse(localStorage.getItem("champ"))
         : initialState;
     }
-  
+
     componentDidMount() {
       const { articles } = this.state;
       if (articles && articles.length === 0) {
-        const defaultAPI = `https://api.pandascore.co/lol/champions?page[number]=&page[size]=&token=${token}`;
+        const defaultAPI = url+`page[number]=&page[size]=&token=${token}`;
         const { pageSize } = this.state;
         fetch(defaultAPI)
           .then((response) => response.json())
@@ -43,7 +45,7 @@ const initialState = {
         this.setPage(page);
       }
     }
-  
+
 
 
        /**
@@ -172,7 +174,7 @@ const initialState = {
   searchEnter = (event) => {
     const { page } = this.state;
     if (event !== "") {
-      const defaultAPI = `https://api.pandascore.co/lol/champions?search[name]=${event}&token=h1uX-wC3YOCMRJRUGQIXQ2y2vGwEnYlrKYPdrStNUnI01Ew63a4`;
+      const defaultAPI = url+`search[name]=${event}&token=${token}`;
       fetch(defaultAPI)
         .then((response) => response.json())
         .then((data) => this.setState({
@@ -256,7 +258,5 @@ const initialState = {
     );
     }
   }
-  // Champions.propTypes = {
-  //   history: Object.isRequired,
-  // };
+
   export default Champions;

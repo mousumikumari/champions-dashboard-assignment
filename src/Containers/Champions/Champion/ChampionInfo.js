@@ -2,11 +2,26 @@ import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import PropTypes from "prop-types";
 import './ChampionInfo.css';
+import withClass from '../../../Hoc/withClass';
+
 const ChampionInfo = (props) => {
-  const Champions = JSON.parse(localStorage.getItem("champ")) !== null ? JSON.parse(localStorage.getItem("champ")) : [];
-  const champion = Champions.champion;
+ const Champions = JSON.parse(localStorage.getItem("champ")) !== null ? JSON.parse(localStorage.getItem("champ")) : [];
+ const champion = Champions.champion;
+  const { location } = props;
+  const { history } = props;
+
+  const openHome = () => {
+    history.push("/");
+  };
   return (
     <div className="container">
+      <button
+        type="button"
+        className="styledButton"
+        onClick={openHome}
+      >
+        Home
+      </button>
     <ReactBootStrap.Table responsive="lg" striped bordered hover>
       <tbody>
         <tr>
@@ -17,7 +32,7 @@ const ChampionInfo = (props) => {
             {" "}
           </td>
           <td rowSpan='23' className="imageFormat">
-            <img src={champion.big_image_url} alt={champion.big_image_url} />       
+            <img src={champion.big_image_url} alt={champion.big_image_url} />
           </td>
         </tr>
         <tr>
@@ -110,7 +125,7 @@ const ChampionInfo = (props) => {
             {" "}
           </td>
         </tr>
-       
+
       </tbody>
     </ReactBootStrap.Table>
   </div>
@@ -121,5 +136,5 @@ const ChampionInfo = (props) => {
 //     location: Object.isRequired,
 //     history: Object.isRequired,
 //   };
-  
-  export default ChampionInfo;
+
+  export default withClass(ChampionInfo,"container");

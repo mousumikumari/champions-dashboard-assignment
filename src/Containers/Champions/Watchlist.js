@@ -1,17 +1,31 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import * as ReactBootStrap from "react-bootstrap";
+import withClass from '../../Hoc/withClass';
 
-const Watchlist = () => {
+
+const Watchlist = (props) => {
 /**
  * This Function is responsible to show the Watchlist
  *
  * @param {object} props Watchlist details
  */
+
   const watchlist = JSON.parse(localStorage.getItem("watchlist"));
   const [modWatchlist, setWatchlist] = useState(watchlist);
   const history = useHistory();
-
+  const Button = () => {
+  return <button
+  type="button"
+  className="btn btn-primary btn-lg"
+>
+  Remove
+</button>
+}
+  const ColoredButton = withClass(Button);
+  const {
+   openChampionDetails
+  } = props;
   const openHome = () => {
     history.push("/");
   };
@@ -69,6 +83,7 @@ const Watchlist = () => {
                 {champion.name}
               </Link>
             </td>
+
             <td>{champion.armor}</td>
             <td>{champion.armorperlevel}</td>
             <td>{champion.hp}</td>
@@ -81,6 +96,7 @@ const Watchlist = () => {
                 >
                   Remove
                 </button>
+
               </div>
             </td>
           </tr>
@@ -88,6 +104,7 @@ const Watchlist = () => {
       </tbody>
     </ReactBootStrap.Table>
   </div>
+
   </div>
 
   );
