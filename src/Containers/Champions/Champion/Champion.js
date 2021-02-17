@@ -11,7 +11,8 @@ import './Champion.css';
 import Modal from "./Modal";
 import useModal from "./useModal"
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import {Navbar} from "react-bootstrap";
+import logo from '../../../Assets/champion_logo.jpg'
 const pageNumbers = [10, 20, 50];
 /**
  * This Function is responsible to show the main champions Grid
@@ -78,6 +79,11 @@ const Champion = (props) => {
 
       return(
         <div className="">
+ <div className="container">
+    <Navbar className="banner">
+        <img src={logo} alt="logo" className="logo" />
+      </Navbar>
+      </div>
     <div className="row">
           <div className="col left">
             <SearchField
